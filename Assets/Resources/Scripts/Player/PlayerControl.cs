@@ -39,30 +39,6 @@ public class PlayerControl : MonoBehaviour
         DistToGround = m_capsuleCollider.bounds.extents.y;
     }
 
-    public void TakeControl()
-    {
-        Initialize();
-
-        transform.tag = "Player";
-
-        m_wowCam.PlayerControlled = true;
-        m_characterController.enabled = true;
-        m_capsuleCollider.enabled = true;
-    }
-
-    public void ResumeNPC()
-    {
-        transform.tag = "Villager";
-
-        m_wowCam.PlayerControlled = false;
-        m_characterController.enabled = false;
-        m_capsuleCollider.enabled = false;
-
-        var v = Vector3.zero;
-        m_rigidbody.velocity.Set(v.x, v.y, v.z);
-        m_rigidbody.angularVelocity.Set(v.x, v.y, v.z);
-    }
-
     void Update()
     {
         #region Axes movement
