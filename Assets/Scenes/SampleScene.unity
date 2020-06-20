@@ -107,7 +107,7 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
+    agentRadius: 0.25
     agentHeight: 2
     agentSlope: 45
     agentClimb: 0.4
@@ -115,7 +115,7 @@ NavMeshSettings:
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.083333336
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -2026,7 +2026,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10bfd35979674054d9817530c396847d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_checkPoints: []
 --- !u!4 &413803898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 428500, guid: c27c7521daec24863af069554ea1fb47,
@@ -11475,6 +11474,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1136410508}
     m_Modifications:
+    - target: {fileID: 82572891494901941, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_PlayAutomatically
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1164822768565571739, guid: d4aa6a1cb67d84045b4348e67bcf6452,
         type: 3}
       propertyPath: m_LocalPosition.x

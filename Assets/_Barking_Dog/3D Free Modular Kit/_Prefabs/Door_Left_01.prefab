@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 421664}
   - component: {fileID: 8249556}
   - component: {fileID: 5083010057342649742}
+  - component: {fileID: 9134539589121198468}
   m_Layer: 0
   m_Name: Door_Left_01
   m_TagString: Untagged
@@ -236,6 +237,18 @@ Animation:
   m_Animations:
   - {fileID: 7400000, guid: 579b7a41a498329419cf99b0c04418a1, type: 2}
   m_WrapMode: 0
-  m_PlayAutomatically: 1
+  m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &9134539589121198468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 192030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 122b304622ac8184e8dadf0fd6c59d3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
