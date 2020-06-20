@@ -8,6 +8,7 @@ public class AutomaticDoor : MonoBehaviour
     public GameObject DoorLeft;
     public GameObject DoorRight;
 
+    private float m_moveDistance = 2.45f;
     
     // Update is called once per frame
     void Update()
@@ -30,6 +31,8 @@ public class AutomaticDoor : MonoBehaviour
 
     private void OpenDoors(Transform door)
     {
+        
+        door.transform.position = new Vector3(door.transform.position.x + m_moveDistance, door.transform.position.y, door.transform.position.x);
         
                 
     }

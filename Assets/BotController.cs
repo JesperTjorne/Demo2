@@ -56,42 +56,39 @@ public class BotController : MonoBehaviour
 
     private void SetAnimationVariables()
     {
-        //var rigid = GetComponent<Rigidbody>();
-        //var x = rigid.velocity.x;
-        //var y = rigid.velocity.y;
+        var rigid = GetComponent<Rigidbody>();
+        var x = rigid.velocity.x;
+        var y = rigid.velocity.y;
 
         //var moving = Math.Abs(x) + Math.Abs(y) > 0.25 ? true : false;
+        var moving = true;
 
-        //var x = 1.0f;
-        //var y = 1.0f;
-        //var moving = true;
+        m_anim.SetFloat("VelocityX", x);
+        m_anim.SetFloat("VelocityY", y);
 
-        //m_anim.SetFloat("VelocityX", x);
-        //m_anim.SetFloat("VelocityY", y);
+        m_anim.SetBool("Moving", moving);
 
-        //m_anim.SetBool("Moving", moving);
+        //Vector3 worldDeltaPosition = m_navAgent.nextPosition - transform.position;
 
-        Vector3 worldDeltaPosition = m_navAgent.nextPosition - transform.position;
+        //// Map 'worldDeltaPosition' to local space
+        //float dx = Vector3.Dot(transform.right, worldDeltaPosition);
+        //float dy = Vector3.Dot(transform.forward, worldDeltaPosition);
+        //Vector2 deltaPosition = new Vector2(dx, dy);
 
-        // Map 'worldDeltaPosition' to local space
-        float dx = Vector3.Dot(transform.right, worldDeltaPosition);
-        float dy = Vector3.Dot(transform.forward, worldDeltaPosition);
-        Vector2 deltaPosition = new Vector2(dx, dy);
+        //// Low-pass filter the deltaMove
+        //float smooth = Mathf.Min(1.0f, Time.deltaTime / 0.15f);
+        //smoothDeltaPosition = Vector2.Lerp(smoothDeltaPosition, deltaPosition, smooth);
 
-        // Low-pass filter the deltaMove
-        float smooth = Mathf.Min(1.0f, Time.deltaTime / 0.15f);
-        smoothDeltaPosition = Vector2.Lerp(smoothDeltaPosition, deltaPosition, smooth);
+        //// Update velocity if time advances
+        //if (Time.deltaTime > 1e-5f)
+        //    velocity = smoothDeltaPosition / Time.deltaTime;
 
-        // Update velocity if time advances
-        if (Time.deltaTime > 1e-5f)
-            velocity = smoothDeltaPosition / Time.deltaTime;
+        //bool shouldMove = velocity.magnitude > 0.05f && m_navAgent.remainingDistance > m_navAgent.radius;
 
-        bool shouldMove = velocity.magnitude > 0.5f && m_navAgent.remainingDistance > m_navAgent.radius;
-
-        // Update animation parameters
-        m_anim.SetBool("Moving", shouldMove);
-        m_anim.SetFloat("VelocityX", velocity.x);
-        m_anim.SetFloat("VelocityY", velocity.y);
+        //// Update animation parameters
+        //m_anim.SetBool("Moving", shouldMove);
+        //m_anim.SetFloat("VelocityX", velocity.x);
+        //m_anim.SetFloat("VelocityY", velocity.y);
 
         GetComponent<LookAt>().lookAtTargetPosition = m_navAgent.steeringTarget + transform.forward;
     }

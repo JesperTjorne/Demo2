@@ -575,10 +575,45 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5165383770748276866, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165383770748276866, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016563249, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016563249, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016563249, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016790821, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_Left_01
+      objectReference: {fileID: 0}
     - target: {fileID: 5165383771016820017, guid: d4aa6a1cb67d84045b4348e67bcf6452,
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016820017, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_Left_01
       objectReference: {fileID: 0}
     - target: {fileID: 5165383772024992993, guid: d4aa6a1cb67d84045b4348e67bcf6452,
         type: 3}
@@ -590,6 +625,21 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6353349123363259781, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353349123363259781, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 8034a0a7d98ccd14f897671831f70827, type: 2}
+    - target: {fileID: 6353349123363259781, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 7400000, guid: 8034a0a7d98ccd14f897671831f70827, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4aa6a1cb67d84045b4348e67bcf6452, type: 3}
 --- !u!4 &97677121 stripped
@@ -2466,13 +2516,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10bfd35979674054d9817530c396847d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartCheckpoint: 0
+  StartCheckpoint: 10
 --- !u!4 &404749121 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2548460511940172469, guid: b18bbfce1c4943449a6d74876a7d27d7,
     type: 3}
   m_PrefabInstance: {fileID: 404749114}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &404749122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404749115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f21ad4b2c6c08d548917c9f688221b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 0}
+  lookAtTargetPosition: {x: 0, y: 0, z: 0}
+  lookAtCoolTime: 0.2
+  lookAtHeatTime: 0.2
+  looking: 1
 --- !u!4 &413803898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 428500, guid: c27c7521daec24863af069554ea1fb47,
@@ -5930,13 +5997,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1928055588}
     m_Modifications:
-    - target: {fileID: 169994, guid: 088b5f04d52a542ec975e88d7d9934f5, type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 192030, guid: 088b5f04d52a542ec975e88d7d9934f5, type: 3}
       propertyPath: m_Name
-      value: Door_Right_01
+      value: Door_Left_01
       objectReference: {fileID: 0}
     - target: {fileID: 421664, guid: 088b5f04d52a542ec975e88d7d9934f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5973,14 +6036,6 @@ PrefabInstance:
     - target: {fileID: 421664, guid: 088b5f04d52a542ec975e88d7d9934f5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: 421664, guid: 088b5f04d52a542ec975e88d7d9934f5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 421664, guid: 088b5f04d52a542ec975e88d7d9934f5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 088b5f04d52a542ec975e88d7d9934f5, type: 3}
@@ -13381,6 +13436,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1549455260089075481, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1549455260089075481, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 8034a0a7d98ccd14f897671831f70827, type: 2}
+    - target: {fileID: 1549455260089075481, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 7400000, guid: 8034a0a7d98ccd14f897671831f70827, type: 2}
+    - target: {fileID: 1549455260089075481, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4189404459026971781, guid: d4aa6a1cb67d84045b4348e67bcf6452,
         type: 3}
       propertyPath: m_Name
@@ -13391,10 +13466,35 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016563249, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0000012575437
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016563249, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016563249, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016790821, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_Left_01
+      objectReference: {fileID: 0}
     - target: {fileID: 5165383771016820017, guid: d4aa6a1cb67d84045b4348e67bcf6452,
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016820017, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_Left_01
       objectReference: {fileID: 0}
     - target: {fileID: 5165383772024992993, guid: d4aa6a1cb67d84045b4348e67bcf6452,
         type: 3}
@@ -13406,6 +13506,21 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6353349123363259781, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353349123363259781, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 8034a0a7d98ccd14f897671831f70827, type: 2}
+    - target: {fileID: 6353349123363259781, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 7400000, guid: 8034a0a7d98ccd14f897671831f70827, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4aa6a1cb67d84045b4348e67bcf6452, type: 3}
 --- !u!4 &2036432090 stripped
@@ -15020,10 +15135,20 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016790821, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_Left_01
+      objectReference: {fileID: 0}
     - target: {fileID: 5165383771016820017, guid: d4aa6a1cb67d84045b4348e67bcf6452,
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016820017, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_Left_01
       objectReference: {fileID: 0}
     - target: {fileID: 5165383772024992993, guid: d4aa6a1cb67d84045b4348e67bcf6452,
         type: 3}
@@ -15035,6 +15160,21 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6353349123363259781, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Animations.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6353349123363259781, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Animation
+      value: 
+      objectReference: {fileID: 7400000, guid: 8034a0a7d98ccd14f897671831f70827, type: 2}
+    - target: {fileID: 6353349123363259781, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_Animations.Array.data[0]
+      value: 
+      objectReference: {fileID: 7400000, guid: 8034a0a7d98ccd14f897671831f70827, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4aa6a1cb67d84045b4348e67bcf6452, type: 3}
 --- !u!4 &5165383771147655340 stripped
