@@ -8,34 +8,56 @@ public class deleteMe_door : MonoBehaviour
 
     void Awake() 
     {
-        
+        CloseDoor();
     }
 
     void Update() 
     {
         if (Input.GetKeyDown(KeyCode.Space)) 
         {
-            // GetComponent<Animation>().animatePhysics = false;
-            var animation = GetComponent<Animation>();
-
-            animation["Door_Open"].speed = 1;
-            animation["Door_Open"].time = 0;
-
-            animation.Play("Door_Open");
-            // GetComponent<Animation>().Play("Door_Open");
-            // GetComponent<Animator>().SetTrigger("Open");
+            OpenDoor();
         }  
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            // GetComponent<Animation>().Play("Door_Close");
-            var animation = GetComponent<Animation>();
-
-            animation["Door_Open"].speed = -1;
-            animation["Door_Open"].time = animation["Door_Open"].length;
-
-            animation.Play("Door_Open");
-            // GetComponent<Animator>().SetTrigger("Close");
+            CloseDoor();
         }
+    }
+
+    private void OpenDoor()
+    {
+        var animation = GetComponent<Animation>();
+
+        animation["Door_Open"].speed = 1;
+        animation["Door_Open"].time = 0;
+
+        animation.Play("Door_Open");
+    }
+
+    private void CloseDoor() 
+    {
+        var animation = GetComponent<Animation>();
+
+        animation["Door_Open"].speed = -1;
+        animation["Door_Open"].time = animation["Door_Open"].length;
+
+        animation.Play("Door_Open");
+    }
+
+    private void OnTriggerEnter(Collider col) 
+    {
+        if (col.tag == "Bot")
+        {
+            OpenDoor();
+        }
+    }
+
+    private void OnTriggerExit(Collider col) 
+    {
+        if (col.tag == "Bot")
+        {
+            CloseDoor();
+        }
+        
     }
 }
