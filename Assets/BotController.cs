@@ -11,6 +11,8 @@ public class BotController : MonoBehaviour
     private List<Transform> m_checkPoints;
 
     [SerializeField]
+    private bool m_reverseCheckPointDirection;
+    [SerializeField]
     private int m_checkPointIndex;
 
     void Awake() 
@@ -22,7 +24,6 @@ public class BotController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log($"CheckpointIndex: {m_checkPointIndex}");
         var target = GetTarget();
         m_navAgent.SetDestination(target);
     }
@@ -31,12 +32,19 @@ public class BotController : MonoBehaviour
     {
         var target = m_checkPoints[m_checkPointIndex].position;
 
-        Debug.Log($"Target: {m_checkPoints[m_checkPointIndex]}");
         if (Vector3.Distance(transform.position, target) < m_navAgent.stoppingDistance)
         {
-            m_checkPointIndex++;
-            if (m_checkPointIndex > m_checkPoints.Count) m_checkPointIndex = 0;
-            return m_checkPoints[m_checkPointIndex].position;
+            if (m_reverseCheckPointDirection) 
+            {
+                m_checkPointIndex--;
+                if (m_checkPointIndex < 0) m_checkPointIndex = m_checkPoints.Count - 1;
+            }
+            else 
+            {
+                m_checkPointIndex++;
+                if (m_checkPointIndex > m_checkPoints.Count) m_checkPointIndex = 0;
+            }
+            target = m_checkPoints[m_checkPointIndex].position;
         }
 
         return target;
