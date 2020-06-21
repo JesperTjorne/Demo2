@@ -32,8 +32,7 @@ public class BotController : MonoBehaviour
         // TODO: Look at player
         m_lookAt.lookAtTargetPosition = m_navAgent.steeringTarget + transform.forward;
 
-        transform.rotation = Quaternion.LookRotation(m_navAgent.steeringTarget + transform.forward);
-
+        transform.LookAt(m_navAgent.nextPosition);
     }
 
     private Vector3 GetTarget()
@@ -71,8 +70,8 @@ public class BotController : MonoBehaviour
         // var moving = Math.Abs(x) + Math.Abs(y) > 0.25 ? true : false;
         var moving = true;
 
-        m_anim.SetFloat("VelocityX", x);
-        m_anim.SetFloat("VelocityY", y);
+        m_anim.SetFloat("VelocityX", 0f);
+        m_anim.SetFloat("VelocityY", 1.0f);
 
         m_anim.SetBool("Moving", moving);
     }

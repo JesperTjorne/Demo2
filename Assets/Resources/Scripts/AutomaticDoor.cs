@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class deleteMe_door : MonoBehaviour
+public class AutomaticDoor : MonoBehaviour
 {
-    
+    private bool m_isOpen;
+
+    public bool m_canClose { get; private set; }
 
     void Awake() 
     {
@@ -26,6 +28,7 @@ public class deleteMe_door : MonoBehaviour
 
     private void OpenDoor()
     {
+        m_isOpen = true;
         var animation = GetComponent<Animation>();
 
         animation["Door_Open"].speed = 1;
@@ -36,6 +39,7 @@ public class deleteMe_door : MonoBehaviour
 
     private void CloseDoor() 
     {
+        m_isOpen = false;
         var animation = GetComponent<Animation>();
 
         animation["Door_Open"].speed = -1;
@@ -48,7 +52,19 @@ public class deleteMe_door : MonoBehaviour
     {
         if (col.tag == "Bot")
         {
-            OpenDoor();
+            if (!m_isOpen)
+            {
+                OpenDoor();
+            }
+        }
+    }
+
+    private void OnTriggerStay(Collider col)
+    {
+        if (col.tag == "Bot")
+        {
+            m_canClose = false;
+
         }
     }
 
@@ -56,8 +72,16 @@ public class deleteMe_door : MonoBehaviour
     {
         if (col.tag == "Bot")
         {
-            CloseDoor();
+            if (m_canClose && m_isOpen)
+            {
+                CloseDoor();
+            }
         }
-        
+    }
+
+    IEnumerator Delay(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        m_canClose = true;
     }
 }
