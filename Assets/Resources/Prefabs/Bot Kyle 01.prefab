@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 6846042369637496879}
   - component: {fileID: 4117768733060140398}
   - component: {fileID: 4117768733060140399}
+  - component: {fileID: 8305756411852051804}
   m_Layer: 0
   m_Name: Bot Kyle 01
   m_TagString: Bot
@@ -742,6 +743,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_reverseCheckPointDirection: 0
   m_checkPointIndex: 0
+--- !u!114 &8305756411852051804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3180643413529306574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ffa1c41eb029b4185bd29771c8e67d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 5238634621140062048}
+  lookAtTargetPosition: {x: 0, y: 0, z: 0}
+  lookAtCoolTime: 0.2
+  lookAtHeatTime: 0.2
+  looking: 1
 --- !u!1 &3483733079159994899
 GameObject:
   m_ObjectHideFlags: 0
