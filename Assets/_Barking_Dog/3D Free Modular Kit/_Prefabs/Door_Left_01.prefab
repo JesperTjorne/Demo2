@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &419594
 Transform:
@@ -236,9 +236,10 @@ Animation:
   m_Animation: {fileID: 7400000, guid: 579b7a41a498329419cf99b0c04418a1, type: 2}
   m_Animations:
   - {fileID: 7400000, guid: 579b7a41a498329419cf99b0c04418a1, type: 2}
+  - {fileID: 7400000, guid: a2891b01372ef394382ee92e7c591a94, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
+  m_AnimatePhysics: 1
   m_CullingType: 0
 --- !u!114 &9134539589121198468
 MonoBehaviour:

@@ -108,7 +108,7 @@ NavMeshSettings:
     serializedVersion: 2
     agentTypeID: 0
     agentRadius: 0.25
-    agentHeight: 2
+    agentHeight: 1.8
     agentSlope: 45
     agentClimb: 0.4
     ledgeDropHeight: 0
@@ -121,7 +121,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 55706d4376cd7814a89534dd2202a3fe, type: 2}
 --- !u!1001 &6648772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -473,6 +473,11 @@ PrefabInstance:
     - target: {fileID: 5165383771016820017, guid: d4aa6a1cb67d84045b4348e67bcf6452,
         type: 3}
       propertyPath: m_NavMeshLayer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5165383771016820017, guid: d4aa6a1cb67d84045b4348e67bcf6452,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5165383772024992993, guid: d4aa6a1cb67d84045b4348e67bcf6452,
@@ -2002,7 +2007,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.2
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -2026,6 +2031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10bfd35979674054d9817530c396847d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_checkPointIndex: 0
 --- !u!4 &413803898 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 428500, guid: c27c7521daec24863af069554ea1fb47,
